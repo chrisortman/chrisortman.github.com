@@ -17,7 +17,7 @@ Am using [MarkPad](http://code52.org/DownmarkerWPF/) to write this, but it keeps
 
 I'm going to dig into the MarkPad source code, and realize I should post a screenshot of the error I'm getting so I quick [check on how to do that with octopress](https://www.google.com/search?oq=octopress&sugexp=chrome,mod=7&sourceid=chrome&ie=UTF-8&q=octopress#hl=en&sclient=psy-ab&q=octopress+images&oq=octopress+images&gs_l=serp.3..0l2j0i8j0i22.5591.6913.0.7065.7.5.0.2.2.0.180.769.0j5.5.0.les%3B..0.0...1c.1.WX0tFXap4GM&pbx=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&fp=304ddafb65aaa7e0&biw=903&bih=913). It looks pretty easy. 
 
-{% img screen_shots/markpad_crash.png %}
+{% img screen_shots/markpad_crash.PNG %}
 
 I know it must be related to monitoring of a file or directory, so I do a git grep "FileSystemWatcher" which leads me to [FileSystemWatcherWrapper](https://github.com/Code52/DownmarkerWPF/blob/master/src/MarkPad/Infrastructure/Abstractions/FileSystemWatcherWrapper.cs)
 
