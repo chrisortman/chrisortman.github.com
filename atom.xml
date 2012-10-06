@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Thoughtstream]]></title>
   <link href="http://chrisortman.github.com/atom.xml" rel="self"/>
   <link href="http://chrisortman.github.com/"/>
-  <updated>2012-10-05T15:59:42-05:00</updated>
+  <updated>2012-10-06T00:38:15-05:00</updated>
   <id>http://chrisortman.github.com/</id>
   <author>
     <name><![CDATA[Chris Ortman]]></name>
@@ -12,5 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Friday: beer+code]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/"/>
+    <updated>2012-10-05T22:32:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code</id>
+    <content type="html"><![CDATA[<p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
+On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
+
+<p>Today I am setting up an <a href="http://octopress.org">octopress</a> blog. After <a href="http://blog.posterous.com/big-news">what happened with posterous</a> I really like the idea of owning my own content/data. I have tried several methods of journaling and blogging before, but struggle to stick with it. I think the git and simple text editor nature of octopress will work for me because it fits into my natural workflow.</p>
+
+<p>I have been very enamored with the ideas of clojure and lisp lately. Mostly the ability to build your own language within them. I also love the purity of how everything is a list. I am working my way through Clojure Programming (currently at location 3483)</p>
+
+<p>Am using <a href="http://code52.org/DownmarkerWPF/">MarkPad</a> to write this, but it keeps complaining about not being able to monitor locked files under .git, I suppose we can fix that&#8230;</p>
+
+<p>I&#8217;m going to dig into the MarkPad source code, and realize I should post a screenshot of the error I&#8217;m getting so I quick <a href="https://www.google.com/search?oq=octopress&amp;sugexp=chrome,mod=7&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=octopress#hl=en&amp;sclient=psy-ab&amp;q=octopress+images&amp;oq=octopress+images&amp;gs_l=serp.3..0l2j0i8j0i22.5591.6913.0.7065.7.5.0.2.2.0.180.769.0j5.5.0.les%3B..0.0...1c.1.WX0tFXap4GM&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=304ddafb65aaa7e0&amp;biw=903&amp;bih=913">check on how to do that with octopress</a>. It looks pretty easy.</p>
+
+<p><img src="screen_shots/markpad_crash.png"></p>
+
+<p>I know it must be related to monitoring of a file or directory, so I do a git grep &#8220;FileSystemWatcher&#8221; which leads me to <a href="https://github.com/Code52/DownmarkerWPF/blob/master/src/MarkPad/Infrastructure/Abstractions/FileSystemWatcherWrapper.cs">FileSystemWatcherWrapper</a></p>
+
+<p>Simple fix, <a href="">pull request</a> submitted.</p>
+]]></content>
+  </entry>
   
 </feed>
