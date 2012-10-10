@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Journal"
+date: 2012-10-07 13:13
+comments: true
+categories: [Journal, SublimeText2]
+---
+
+I have been trying out [Sublime Text 2](http://www.sublimetext.com/2) lately. The thing that really draws me to the editor is the nice package system,
+the built in foldere drawer and the ability to edit multiple items at once.
+
+My long time favorite editor is [vim](http://www.vim.org)
+so I run with [Vintage](http://www.sublimetext.com/docs/2/vintage.html) mode enabled. One thing that bothers me is that when in command
+mode the cursor just looks like an underbar and for some reason I really miss that blinking square. Fortunately it looks like there
+is [a plugin that will do just what I want](https://github.com/netpro2k/SublimeBlockCursor)
+
+While I was looking for an option to enable the block cursor I stumbled upon another setting
+
+{% codeblock %}
+	"font_options": ["directwrite"]
+{% endcodeblock %}
+
+I'm not sure if i like this setting or not yet. The text seems crisper and larger, but it almost seems like the letters are too squished together.
+
