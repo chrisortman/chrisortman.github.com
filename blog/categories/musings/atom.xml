@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Musings | Thoughtstream]]></title>
+  <link href="http://chrisortman.github.com/blog/categories/musings/atom.xml" rel="self"/>
+  <link href="http://chrisortman.github.com/"/>
+  <updated>2012-10-09T22:37:56-05:00</updated>
+  <id>http://chrisortman.github.com/</id>
+  <author>
+    <name><![CDATA[Chris Ortman]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Musings]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/08/musings/"/>
+    <updated>2012-10-08T10:19:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/08/musings</id>
+    <content type="html"><![CDATA[<p>This <a href="https://plus.google.com/111465598045192916635/posts/CkmmbjmvebM">post about OSS projects</a> came across
+my twitter feed this morning. My first reaction was to make some snarky remarks about the javascript
+community, but then I began to wonder to what degree to the values of a language attract people of similar values?</p>
+
+<p>If the values of a language are to strive for the highest order of elegance and simplicity then people who
+gravitate to those things will start using that language. I don't want to stereotype people based on a programming
+language choice as there are many other reasons someone might use a language, but either what I have observed or
+my confirmation bias makes me think this is at least partly true.</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
