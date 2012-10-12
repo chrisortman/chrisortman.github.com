@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Journal"
+date: 2012-10-11 08:19
+comments: true
+categories: 
+---
+
+#Links
+
+[The new normal](http://blog.hinshelwood.com/the-new-normal-of-the-modern-application-lifecycle/)
