@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Journal"
+title: "Sunday"
 date: 2012-10-07 13:13
 comments: true
 categories: [Journal, SublimeText2]

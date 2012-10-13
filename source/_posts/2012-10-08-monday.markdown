@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Musings"
+title: "Monday"
 date: 2012-10-08 10:19
 comments: true
 categories: Musings
