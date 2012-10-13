@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Journal | Thoughtstream]]></title>
+  <title><![CDATA[Category: Journal | Captain's Log]]></title>
   <link href="http://chrisortman.github.com/blog/categories/journal/atom.xml" rel="self"/>
   <link href="http://chrisortman.github.com/"/>
-  <updated>2012-10-09T22:37:56-05:00</updated>
+  <updated>2012-10-13T01:55:16-05:00</updated>
   <id>http://chrisortman.github.com/</id>
   <author>
     <name><![CDATA[Chris Ortman]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Journal]]></title>
-    <link href="http://chrisortman.github.com/blog/2012/10/07/journal/"/>
+    <title type="html"><![CDATA[Sunday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/07/sunday/"/>
     <updated>2012-10-07T13:13:00-05:00</updated>
-    <id>http://chrisortman.github.com/blog/2012/10/07/journal</id>
+    <id>http://chrisortman.github.com/blog/2012/10/07/sunday</id>
     <content type="html"><![CDATA[<p>I have been trying out <a href="http://www.sublimetext.com/2">Sublime Text 2</a> lately. The thing that really draws me to the editor is the nice package system,
 the built in foldere drawer and the ability to edit multiple items at once.</p>
 

@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: SublimeText2 - Captain's Log</title>
+  <title>Friday: beer+code - Captain's Log</title>
   <meta name="author" content="Chris Ortman">
 
   
-  <meta name="description" content="Category: SublimeText2">
+  <meta name="description" content="On tap: Leinenkugels Summer Shandy
+On the tube: Star Trek and X-Men: First Class Time for some clojure again. I am getting impatient to finish this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisortman.github.comblog/categories/sublimetext2/">
+  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -75,36 +76,112 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: SublimeText2</h1>
+    
+      <h1 class="entry-title">Friday: Beer+code</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-12T22:37:00-05:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
+On the tube: <a href="http://www.imdb.com/title/tt0796366/">Star Trek</a> and <a href="http://www.imdb.com/title/tt1270798/">X-Men: First Class</a></p>
 
-  
-  <h2>2012</h2>
+<p>Time for some <a href="http://clojure.org">clojure</a> again. I am getting impatient to finish this book because I want to get cracking on a few projects
+and working on <a href="http://github.com/clojure/clojure-clr">clojure-clr</a></p>
 
-<article>
-  
-<h1><a href="/blog/2012/10/07/sunday/">Sunday</a></h1>
-<time datetime="2012-10-07T13:13:00-05:00" pubdate><span class='month'>Oct</span> <span class='day'>07</span> <span class='year'>2012</span></time>
+<p>Grasping some fundamentals. Let&#8217;s talk about reduce.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/journal/'>Journal</a>, <a class='category' href='/blog/categories/sublimetext2/'>SublimeText2</a></span>
-</footer>
+<p><code>(doc reduce)</code> says:</p>
+
+<blockquote><p>([f coll] [f val coll])<br/>  f should be a function of 2 arguments. If val is not supplied,<br/>  returns the result of applying f to the first 2 items in coll, then<br/>  applying f to that result and the 3rd item, etc. If coll contains no<br/>  items, f must accept no arguments as well, and reduce returns the<br/>  result of calling f with no arguments.  If coll has only 1 item, it<br/>  is returned and f is not called.  If val is supplied, returns the<br/>  result of applying f to val and the first item in coll, then<br/>  applying f to that result and the 2nd item, etc. If coll contains no<br/>  items, returns val and f is not called.</p></blockquote>
 
 
-</article>
+<p>So&#8230; <code>(reduce + [1 2])</code> will give us 3 and <code>(reduce + 5 [1 2])</code> will give us 8 because we apply the plus to 5, then to 1 which gives us 6 then to 2 which gives us 8</p>
 
+<p>We can use <code>fn</code> to define an anonymous function, so&#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(reduce (fn [x y] (+ x y)) [1 2])</span></code></pre></td></tr></table></div></figure>
+
+
+<p>will be the same as above and give us 3.</p>
+
+<p>I think the thing that worries me most about clojure is that it is awesome, but it requires such a tremendous amout of brain power/study before you can understand the concepts that it will never catch on because most will deem it as not worth it.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Chris Ortman</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-12T22:37:00-05:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/11/thursday/" title="Previous Post: Thursday">&laquo; Thursday</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -221,7 +298,10 @@
       var disqus_shortname = 'chrisoblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/';
+        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

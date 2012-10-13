@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Thoughtstream]]></title>
+  <title><![CDATA[Captain's Log]]></title>
   <link href="http://chrisortman.github.com/atom.xml" rel="self"/>
   <link href="http://chrisortman.github.com/"/>
-  <updated>2012-10-09T22:37:56-05:00</updated>
+  <updated>2012-10-13T01:55:16-05:00</updated>
   <id>http://chrisortman.github.com/</id>
   <author>
     <name><![CDATA[Chris Ortman]]></name>
@@ -14,11 +14,64 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Friday: beer+code]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code/"/>
+    <updated>2012-10-12T22:37:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/12/friday-beer-plus-code</id>
+    <content type="html"><![CDATA[<p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
+On the tube: <a href="http://www.imdb.com/title/tt0796366/">Star Trek</a> and <a href="http://www.imdb.com/title/tt1270798/">X-Men: First Class</a></p>
+
+<p>Time for some <a href="http://clojure.org">clojure</a> again. I am getting impatient to finish this book because I want to get cracking on a few projects
+and working on <a href="http://github.com/clojure/clojure-clr">clojure-clr</a></p>
+
+<p>Grasping some fundamentals. Let&#8217;s talk about reduce.</p>
+
+<p><code>(doc reduce)</code> says:</p>
+
+<blockquote><p>([f coll] [f val coll])<br/>  f should be a function of 2 arguments. If val is not supplied,<br/>  returns the result of applying f to the first 2 items in coll, then<br/>  applying f to that result and the 3rd item, etc. If coll contains no<br/>  items, f must accept no arguments as well, and reduce returns the<br/>  result of calling f with no arguments.  If coll has only 1 item, it<br/>  is returned and f is not called.  If val is supplied, returns the<br/>  result of applying f to val and the first item in coll, then<br/>  applying f to that result and the 2nd item, etc. If coll contains no<br/>  items, returns val and f is not called.</p></blockquote>
+
+
+<p>So&#8230; <code>(reduce + [1 2])</code> will give us 3 and <code>(reduce + 5 [1 2])</code> will give us 8 because we apply the plus to 5, then to 1 which gives us 6 then to 2 which gives us 8</p>
+
+<p>We can use <code>fn</code> to define an anonymous function, so&#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(reduce (fn [x y] (+ x y)) [1 2])</span></code></pre></td></tr></table></div></figure>
+
+
+<p>will be the same as above and give us 3.</p>
+
+<p>I think the thing that worries me most about clojure is that it is awesome, but it requires such a tremendous amout of brain power/study before you can understand the concepts that it will never catch on because most will deem it as not worth it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thursday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/11/thursday/"/>
+    <updated>2012-10-11T08:19:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/11/thursday</id>
+    <content type="html"><![CDATA[<h2>Links</h2>
+
+<p><a href="http://blog.hinshelwood.com/the-new-normal-of-the-modern-application-lifecycle/">The new normal</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wednesday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/10/wednesday/"/>
+    <updated>2012-10-10T08:11:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/10/wednesday</id>
+    <content type="html"><![CDATA[<p>Sometimes I wrestle with the differences between TDD &amp; BDD. BDD always seems easier at the outset, but then later I have a harder time finding where things are. While reading <a href="http://www.amazon.com/gp/product/0137081073/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0137081073&amp;linkCode=as2&amp;tag=chriortmspost-20">The Clean Coder</a> today I was on the chapter about testing strategies.
+In this context it seems like component tests are better suited to BDD. Maybe identifying behavior can be subjective and that is why BDD naming is sometimes hard? Does it turn into another impedence mismatch? I think it must, if we reduce the impedence mismatch we would approach test case per class. So the the only difference is really assert vs should</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Tuesday]]></title>
     <link href="http://chrisortman.github.com/blog/2012/10/09/tuesday/"/>
     <updated>2012-10-09T15:12:00-05:00</updated>
     <id>http://chrisortman.github.com/blog/2012/10/09/tuesday</id>
-    <content type="html"><![CDATA[<h1>References</h1>
+    <content type="html"><![CDATA[<h2>References</h2>
 
 <p><a href="http://intwoplacesatonce.com/2009/08/measuring-msbuild-performance/">Measuring MSBuild performance</a></p>
 
@@ -29,10 +82,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Musings]]></title>
-    <link href="http://chrisortman.github.com/blog/2012/10/08/musings/"/>
+    <title type="html"><![CDATA[Monday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/08/monday/"/>
     <updated>2012-10-08T10:19:00-05:00</updated>
-    <id>http://chrisortman.github.com/blog/2012/10/08/musings</id>
+    <id>http://chrisortman.github.com/blog/2012/10/08/monday</id>
     <content type="html"><![CDATA[<p>This <a href="https://plus.google.com/111465598045192916635/posts/CkmmbjmvebM">post about OSS projects</a> came across
 my twitter feed this morning. My first reaction was to make some snarky remarks about the javascript
 community, but then I began to wonder to what degree to the values of a language attract people of similar values?</p>
@@ -47,10 +100,10 @@ my confirmation bias makes me think this is at least partly true.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Journal]]></title>
-    <link href="http://chrisortman.github.com/blog/2012/10/07/journal/"/>
+    <title type="html"><![CDATA[Sunday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/07/sunday/"/>
     <updated>2012-10-07T13:13:00-05:00</updated>
-    <id>http://chrisortman.github.com/blog/2012/10/07/journal</id>
+    <id>http://chrisortman.github.com/blog/2012/10/07/sunday</id>
     <content type="html"><![CDATA[<p>I have been trying out <a href="http://www.sublimetext.com/2">Sublime Text 2</a> lately. The thing that really draws me to the editor is the nice package system,
 the built in foldere drawer and the ability to edit multiple items at once.</p>
 

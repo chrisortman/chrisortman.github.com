@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Thoughtstream</title>
+  <title>Captain's Log</title>
   <meta name="author" content="Chris Ortman">
 
   
-  <meta name="description" content="References Measuring MSBuild performance How to configure MSBuild file logging.aspx) How to make TeamBuild generate web deploy zip file
-">
+  <meta name="description" content="On tap: Leinenkugels Summer Shandy
+On the tube: Star Trek and X-Men: First Class Time for some clojure again. I am getting impatient to finish this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,7 +25,7 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Thoughtstream" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Captain's Log" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -48,7 +48,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Thoughtstream</a></h1>
+  <h1><a href="/">Captain's Log</a></h1>
   
     <h2>Sometimes the journey is more important than the destination</h2>
   
@@ -83,6 +83,140 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/10/12/friday-beer-plus-code/">Friday: Beer+code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-12T22:37:00-05:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
+On the tube: <a href="http://www.imdb.com/title/tt0796366/">Star Trek</a> and <a href="http://www.imdb.com/title/tt1270798/">X-Men: First Class</a></p>
+
+<p>Time for some <a href="http://clojure.org">clojure</a> again. I am getting impatient to finish this book because I want to get cracking on a few projects
+and working on <a href="http://github.com/clojure/clojure-clr">clojure-clr</a></p>
+
+<p>Grasping some fundamentals. Let&#8217;s talk about reduce.</p>
+
+<p><code>(doc reduce)</code> says:</p>
+
+<blockquote><p>([f coll] [f val coll])<br/>  f should be a function of 2 arguments. If val is not supplied,<br/>  returns the result of applying f to the first 2 items in coll, then<br/>  applying f to that result and the 3rd item, etc. If coll contains no<br/>  items, f must accept no arguments as well, and reduce returns the<br/>  result of calling f with no arguments.  If coll has only 1 item, it<br/>  is returned and f is not called.  If val is supplied, returns the<br/>  result of applying f to val and the first item in coll, then<br/>  applying f to that result and the 2nd item, etc. If coll contains no<br/>  items, returns val and f is not called.</p></blockquote>
+
+
+<p>So&#8230; <code>(reduce + [1 2])</code> will give us 3 and <code>(reduce + 5 [1 2])</code> will give us 8 because we apply the plus to 5, then to 1 which gives us 6 then to 2 which gives us 8</p>
+
+<p>We can use <code>fn</code> to define an anonymous function, so&#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(reduce (fn [x y] (+ x y)) [1 2])</span></code></pre></td></tr></table></div></figure>
+
+
+<p>will be the same as above and give us 3.</p>
+
+<p>I think the thing that worries me most about clojure is that it is awesome, but it requires such a tremendous amout of brain power/study before you can understand the concepts that it will never catch on because most will deem it as not worth it.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/11/thursday/">Thursday</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-11T08:19:00-05:00" pubdate data-updated="true">Oct 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Links</h2>
+
+<p><a href="http://blog.hinshelwood.com/the-new-normal-of-the-modern-application-lifecycle/">The new normal</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/10/wednesday/">Wednesday</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-10T08:11:00-05:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sometimes I wrestle with the differences between TDD &amp; BDD. BDD always seems easier at the outset, but then later I have a harder time finding where things are. While reading <a href="http://www.amazon.com/gp/product/0137081073/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0137081073&amp;linkCode=as2&amp;tag=chriortmspost-20">The Clean Coder</a> today I was on the chapter about testing strategies.
+In this context it seems like component tests are better suited to BDD. Maybe identifying behavior can be subjective and that is why BDD naming is sometimes hard? Does it turn into another impedence mismatch? I think it must, if we reduce the impedence mismatch we would approach test case per class. So the the only difference is really assert vs should</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/10/09/tuesday/">Tuesday</a></h1>
     
     
@@ -106,7 +240,7 @@
   </header>
 
 
-  <div class="entry-content"><h1>References</h1>
+  <div class="entry-content"><h2>References</h2>
 
 <p><a href="http://intwoplacesatonce.com/2009/08/measuring-msbuild-performance/">Measuring MSBuild performance</a></p>
 
@@ -125,7 +259,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/08/musings/">Musings</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/08/monday/">Monday</a></h1>
     
     
       <p class="meta">
@@ -170,7 +304,7 @@ my confirmation bias makes me think this is at least partly true.</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/07/journal/">Journal</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/07/sunday/">Sunday</a></h1>
     
     
       <p class="meta">
@@ -279,19 +413,23 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/12/friday-beer-plus-code/">Friday: beer+code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/11/thursday/">Thursday</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/10/wednesday/">Wednesday</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/09/tuesday/">Tuesday</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/10/08/musings/">Musings</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/07/journal/">Journal</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/05/friday-beer-plus-code/">Friday: beer+code</a>
+        <a href="/blog/2012/10/08/monday/">Monday</a>
       </li>
     
   </ul>
@@ -377,7 +515,7 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
   
 
 <script type="text/javascript">
-      var disqus_shortname = 'chrisortman';
+      var disqus_shortname = 'chrisoblog';
       
         
         var disqus_script = 'count.js';

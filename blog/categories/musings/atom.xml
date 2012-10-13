@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Musings | Thoughtstream]]></title>
+  <title><![CDATA[Category: Musings | Captain's Log]]></title>
   <link href="http://chrisortman.github.com/blog/categories/musings/atom.xml" rel="self"/>
   <link href="http://chrisortman.github.com/"/>
-  <updated>2012-10-09T22:37:56-05:00</updated>
+  <updated>2012-10-13T01:55:16-05:00</updated>
   <id>http://chrisortman.github.com/</id>
   <author>
     <name><![CDATA[Chris Ortman]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Musings]]></title>
-    <link href="http://chrisortman.github.com/blog/2012/10/08/musings/"/>
+    <title type="html"><![CDATA[Monday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/08/monday/"/>
     <updated>2012-10-08T10:19:00-05:00</updated>
-    <id>http://chrisortman.github.com/blog/2012/10/08/musings</id>
+    <id>http://chrisortman.github.com/blog/2012/10/08/monday</id>
     <content type="html"><![CDATA[<p>This <a href="https://plus.google.com/111465598045192916635/posts/CkmmbjmvebM">post about OSS projects</a> came across
 my twitter feed this morning. My first reaction was to make some snarky remarks about the javascript
 community, but then I began to wonder to what degree to the values of a language attract people of similar values?</p>
