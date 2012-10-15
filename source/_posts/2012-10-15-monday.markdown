@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Monday"
+date: 2012-10-15 11:35
+comments: true
+categories: 
+---
+
+###Refactoring
+
+I am doing a bugfix in some older code that uses direct ADO.NET for queries. This code handles some online directory stuff so there are things like SearchPeople, SearchBusiness, SearchGovernment. You can tell from looking at these functions that the first function was written and then the other two were built by copy / paste and change a couple lines. 
+
+Something that is difficult when you have large functions that have been built this way is that you can tell they are /very/ similar but without careful examination you don't know exactly what is different.
+
+Because to fix this bug I will need to make the same change in 3 different places I know that I should refactor this so that much of the common code is in at the very least a set of helper functions.
+
+To start this excercise I want to build some [ApprovalTests](http://approvaltests.sourceforge.net/) first so that I can get my code coverage high and have a better feel for if/when I break some existing behavior.
+
+Once I had the tests in place I could go about the process of factoring out and combining common code. At one point I had extracted some code from each of my 3 search methods and upon rerunning the tests I found something had broken. It was my own fault for changing too much between running the tests, but what I really wished I could do is undo changes until I could find the exact spot where I had broken the tests, but then I would also need to replay those changes, however, relying on edit/redo to do this would be just as likely to break something else. What I really wanted here was [git-bisect](http://www.kernel.org/pub/software/scm/git/docs/git-bisect.html)
+
+###Scalability
+
+I saw this [blog post](http://highscalability.com/blog/2012/10/15/simpler-cheaper-faster-playtomics-move-from-net-to-node-and.html) about a company moving from ASP.Net to nodejs and Heroku. Now they have *massive* scale and I can only imagine the type of problems that that could expose, but the issues that they address seem to be addressable in ASP.Net, at least addressable in less work that it would seem to be to move port everything to a new platform.
+
+* Background Workers - Wouldn't ASP.Net cache expiration handle this?
+* Pooled Redis Connections - I have never used the [Service Stack Redis Client](https://github.com/ServiceStack/ServiceStack.Redis) but I have to imagine you could get comparable connection pooling semantics from it (even if it required some modification).
+
+###RazorPDF
+
+I saw the [RazorPDF](http://nyveldt.com/blog/post/Introducing-RazorPDF) project get announced today via twitter. Looks really cool and I can imagine a lot of scenarios for it. But what caught my eye even more was [some of the neat little applications](http://razorant.com/apps) that the developer [Al Nyveldt](http://nyveldt.com/blog/page/about-al-nyveldt) has built in his free time. 
+
+I got into software development because I want to build cool things, and I have several ideas for games I would like to build for my kids to play. Mostly these are ideas that come to me while helping them with their homework or answering some of the crazy random questions they ask during the day. The problem is I have too many of these ideas and am not able to produce them as fast as I would like, so when someone is able to accomplish that I greatly admire them. So /hattip to you Mr. Nyveldt.
