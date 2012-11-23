@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Friday"
+date: 2012-11-23 08:27
+comments: true
+categories: 
+---
+
+Discovered `sp_MSforeach` via this morning's [Morning Dew](http://www.alvinashcraft.com/2012/11/23/dew-drop-november-23-2012-1448). `sp_MSforeach` is a stored proc that will let you execute a block of code for every table in a database.
+
+Here is a example
+
+```
+exec sp_MSforeach 'print "?"'
+```
+
+Which will print:
+
+ [dbo].[Customers]
+ [dbo].[Orders]
+
+etc
+
+[original article](http://www.blackwasp.co.uk/SQLForEachTable.aspx)
+

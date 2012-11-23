@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Monday"
+date: 2012-11-05 09:52
+comments: true
+categories: 
+---
+
+Started getting this error in an ASP.Net MVC4 website
+
+```
+System.TypeInitializationException was unhandled by user code
+  HResult=-2146233036
+  Message=The type initializer for 'System.Web.Helpers.AntiForgery' threw an exception.
+  Source=System.Web.WebPages
+  TypeName=System.Web.Helpers.AntiForgery
+  StackTrace:
+       at System.Web.Helpers.AntiForgery.GetHtml()
+       at System.Web.Mvc.HtmlHelper.AntiForgeryToken()
+       at ASP._Page_Views_Password_Index_cshtml.Execute() 
+       at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+       at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+       at System.Web.WebPages.StartPage.RunPage()
+       at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+       at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+       at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+       at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+       at StackExchange.Profiling.MVCHelpers.ProfilingViewEngine.WrappedView.Render(ViewContext viewContext, TextWriter writer) in C:\Users\sam\Desktop\MiniProfiler\StackExchange.Profiling\MVCHelpers\ProfilingViewEngine.cs:line 34
+       at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+       at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+       at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<InvokeActionResultWithFilters>b__17()
+       at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+  InnerException: System.TypeInitializationException
+       HResult=-2146233036
+       Message=The type initializer for 'System.Web.Helpers.Claims.ClaimsIdentityConverter' threw an exception.
+       Source=System.Web.WebPages
+       TypeName=System.Web.Helpers.Claims.ClaimsIdentityConverter
+       StackTrace:
+            at System.Web.Helpers.AntiForgery.CreateSingletonAntiForgeryWorker()
+            at System.Web.Helpers.AntiForgery..cctor()
+       InnerException: System.IO.FileLoadException
+            HResult=-2147467261
+            Message=Could not load file or assembly 'Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Invalid pointer (Exception from HRESULT: 0x80004003 (E_POINTER))
+            Source=mscorlib
+            FileName=Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+            FusionLog=""
+            StackTrace:
+                 at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+                 at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+                 at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+                 at System.Type.GetType(String typeName)
+                 at System.Web.Helpers.Claims.ClaimsIdentityConverter.GetDefaultConverters()
+                 at System.Web.Helpers.Claims.ClaimsIdentityConverter..cctor()
+            InnerException: System.NullReferenceException
+                 HResult=-2147467261
+                 Message=Object reference not set to an instance of an object.
+                 Source=CustomerPortal.Web
+                 StackTrace:
+                      at CustomerPortal.Web.Global.<>c__DisplayClass7.<Application_Start>b__0(Object sender, ResolveEventArgs args) 
+                      at System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+                 InnerException: 
+
+```
+
+                 
