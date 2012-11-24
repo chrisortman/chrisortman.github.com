@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Friday: beer+code - Captain's Log</title>
+  <title>Friday:Beer+Code - Captain's Log</title>
   <meta name="author" content="Chris Ortman">
 
   
   <meta name="description" content="On tap: Leinenkugels Summer Shandy
-On the tube: Avengers Today I am setting up an octopress blog. After what happened with posterous I really like &hellip;">
+On the tube: Fellowship of the Ring My dad has asked me to build him a small app to help him put together car &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/">
+  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   
   <header>
     
-      <h1 class="entry-title">Friday: Beer+code</h1>
+      <h1 class="entry-title">Friday:Beer+Code</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   
 
 
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+<time datetime="2012-10-19T22:07:00-05:00" pubdate data-updated="true">Oct 19<span>th</span>, 2012</time>
         
       </p>
     
@@ -104,21 +104,17 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
 
 
 <div class="entry-content"><p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
-On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
+On the tube: <a href="http://www.imdb.com/title/tt0120737/">Fellowship of the Ring</a></p>
 
-<p>Today I am setting up an <a href="http://octopress.org">octopress</a> blog. After <a href="http://blog.posterous.com/big-news">what happened with posterous</a> I really like the idea of owning my own content/data. I have tried several methods of journaling and blogging before, but struggle to stick with it. I think the git and simple text editor nature of octopress will work for me because it fits into my natural workflow.</p>
+<p>My dad has asked me to build him a small app to help him put together car listings and sync them between cars.com, craigslist and various other sites. I thought a WPF app and a SQL CE database would fit quite nicely for this. I have also been looking for an excuse to play with some of the new <a href="http://github.com/reactiveui/reactiveui">ReactiveUI</a> bits so win / win there. His computer is still on XP so it will have to target .NET 4.0</p>
 
-<p>I have been very enamored with the ideas of clojure and lisp lately. Mostly the ability to build your own language within them. I also love the purity of how everything is a list. I am working my way through Clojure Programming (currently at location 3483)</p>
+<p>My biggest concern with this tech choice is that I expect he will delegate a lot of the actual management to his better half so I will wind up needing to have the app run on multiple computers which will beg for a shared database of some kind.</p>
 
-<p>Am using <a href="http://code52.org/DownmarkerWPF/">MarkPad</a> to write this, but it keeps complaining about not being able to monitor locked files under .git, I suppose we can fix that&#8230;</p>
+<p>I figure that for starters EntityFramework will be the easiest thing to get started with.</p>
 
-<p>I&#8217;m going to dig into the MarkPad source code, and realize I should post a screenshot of the error I&#8217;m getting so I quick <a href="https://www.google.com/search?oq=octopress&amp;sugexp=chrome,mod=7&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=octopress#hl=en&amp;sclient=psy-ab&amp;q=octopress+images&amp;oq=octopress+images&amp;gs_l=serp.3..0l2j0i8j0i22.5591.6913.0.7065.7.5.0.2.2.0.180.769.0j5.5.0.les%3B..0.0...1c.1.WX0tFXap4GM&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=304ddafb65aaa7e0&amp;biw=903&amp;bih=913">check on how to do that with octopress</a>. It looks pretty easy.</p>
+<p>You run into some problems here because <code>install-package entityframework</code> wants to pull down EF 5, but EntityFramework.SqlCompact is still depending on EF 4.3.1. Also since I&#8217;m using XUnit for my tests thier test runner wants you to target 4.5 and using EF 4.3 on .NET 4.5 causes some warnings (though I don&#8217;t think they will matter)</p>
 
-<p><img src="screen_shots/markpad_crash2.png"></p>
-
-<p>I know it must be related to monitoring of a file or directory, so I do a git grep &#8220;FileSystemWatcher&#8221; which leads me to <a href="https://github.com/Code52/DownmarkerWPF/blob/master/src/MarkPad/Infrastructure/Abstractions/FileSystemWatcherWrapper.cs">FileSystemWatcherWrapper</a></p>
-
-<p>Simple fix, <a href="">pull request</a> submitted.</p>
+<p>I don&#8217;t do this enough for desktop apps, and boy for some reason I can&#8217;t seem to remember that static Database class to configure my initializers. I also thought about storing the database file in a user specific folder, but that isn&#8217;t a front and center option and doesn&#8217;t turn up in the top 3 of a google query so it will require a little investigation.</p>
 </div>
 
 
@@ -141,7 +137,7 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
   
 
 
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+<time datetime="2012-10-19T22:07:00-05:00" pubdate data-updated="true">Oct 19<span>th</span>, 2012</time>
       
 
 
@@ -149,7 +145,7 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -162,8 +158,8 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/10/17/wednesday/" title="Previous Post: Wednesday">&laquo; Wednesday</a>
       
-        <a class="basic-alignment right" href="/blog/2012/10/07/sunday/" title="Next Post: Sunday">Sunday &raquo;</a>
       
     </p>
   </footer>
@@ -291,8 +287,8 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
-        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
+        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/';
+        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/';
         var disqus_script = 'embed.js';
       
     (function () {

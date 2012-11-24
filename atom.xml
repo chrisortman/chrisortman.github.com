@@ -4,7 +4,7 @@
   <title><![CDATA[Captain's Log]]></title>
   <link href="http://chrisortman.github.com/atom.xml" rel="self"/>
   <link href="http://chrisortman.github.com/"/>
-  <updated>2012-10-13T01:55:16-05:00</updated>
+  <updated>2012-10-20T00:42:46-05:00</updated>
   <id>http://chrisortman.github.com/</id>
   <author>
     <name><![CDATA[Chris Ortman]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Friday:Beer+Code]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code/"/>
+    <updated>2012-10-19T22:07:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/19/friday-beer-plus-code</id>
+    <content type="html"><![CDATA[<p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
+On the tube: <a href="http://www.imdb.com/title/tt0120737/">Fellowship of the Ring</a></p>
+
+<p>My dad has asked me to build him a small app to help him put together car listings and sync them between cars.com, craigslist and various other sites. I thought a WPF app and a SQL CE database would fit quite nicely for this. I have also been looking for an excuse to play with some of the new <a href="http://github.com/reactiveui/reactiveui">ReactiveUI</a> bits so win / win there. His computer is still on XP so it will have to target .NET 4.0</p>
+
+<p>My biggest concern with this tech choice is that I expect he will delegate a lot of the actual management to his better half so I will wind up needing to have the app run on multiple computers which will beg for a shared database of some kind.</p>
+
+<p>I figure that for starters EntityFramework will be the easiest thing to get started with.</p>
+
+<p>You run into some problems here because <code>install-package entityframework</code> wants to pull down EF 5, but EntityFramework.SqlCompact is still depending on EF 4.3.1. Also since I&#8217;m using XUnit for my tests thier test runner wants you to target 4.5 and using EF 4.3 on .NET 4.5 causes some warnings (though I don&#8217;t think they will matter)</p>
+
+<p>I don&#8217;t do this enough for desktop apps, and boy for some reason I can&#8217;t seem to remember that static Database class to configure my initializers. I also thought about storing the database file in a user specific folder, but that isn&#8217;t a front and center option and doesn&#8217;t turn up in the top 3 of a google query so it will require a little investigation.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wednesday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/17/wednesday/"/>
+    <updated>2012-10-17T17:29:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/17/wednesday</id>
+    <content type="html"><![CDATA[<p>Dug into SQL more than I normally would need to. Had to do some cleanup work and needed to be able to generate some reports of the data that got changed. <a href="http://msdn.microsoft.com/en-us/library/ms177564.aspx">OUTPUT</a> and <a href="http://msdn.microsoft.com/en-us/library/ms188029.aspx">INTO</a> have made it a lot easier than I remembered it being. This <a href="http://stackoverflow.com/questions/27894/whats-the-difference-between-a-temp-table-and-table-variable-in-sql-server">stackoverflow answer</a> was also very helpful in choosing between temp tables or table variables.</p>
+
+<p>Need some examples of good documentation? Check out these examples on github https://github.com/PharkMillups/beautiful-docs</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Monday]]></title>
+    <link href="http://chrisortman.github.com/blog/2012/10/15/monday/"/>
+    <updated>2012-10-15T11:35:00-05:00</updated>
+    <id>http://chrisortman.github.com/blog/2012/10/15/monday</id>
+    <content type="html"><![CDATA[<h3>Refactoring</h3>
+
+<p>I am doing a bugfix in some older code that uses direct ADO.NET for queries. This code handles some online directory stuff so there are things like SearchPeople, SearchBusiness, SearchGovernment. You can tell from looking at these functions that the first function was written and then the other two were built by copy / paste and change a couple lines.</p>
+
+<p>Something that is difficult when you have large functions that have been built this way is that you can tell they are /very/ similar but without careful examination you don&#8217;t know exactly what is different.</p>
+
+<p>Because to fix this bug I will need to make the same change in 3 different places I know that I should refactor this so that much of the common code is in at the very least a set of helper functions.</p>
+
+<p>To start this excercise I want to build some <a href="http://approvaltests.sourceforge.net/">ApprovalTests</a> first so that I can get my code coverage high and have a better feel for if/when I break some existing behavior.</p>
+
+<p>Once I had the tests in place I could go about the process of factoring out and combining common code. At one point I had extracted some code from each of my 3 search methods and upon rerunning the tests I found something had broken. It was my own fault for changing too much between running the tests, but what I really wished I could do is undo changes until I could find the exact spot where I had broken the tests, but then I would also need to replay those changes, however, relying on edit/redo to do this would be just as likely to break something else. What I really wanted here was <a href="http://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git-bisect</a></p>
+
+<h3>Scalability</h3>
+
+<p>I saw this <a href="http://highscalability.com/blog/2012/10/15/simpler-cheaper-faster-playtomics-move-from-net-to-node-and.html">blog post</a> about a company moving from ASP.Net to nodejs and Heroku. Now they have <em>massive</em> scale and I can only imagine the type of problems that that could expose, but the issues that they address seem to be addressable in ASP.Net, at least addressable in less work that it would seem to be to move port everything to a new platform.</p>
+
+<ul>
+<li>Background Workers - Wouldn&#8217;t ASP.Net cache expiration handle this?</li>
+<li>Pooled Redis Connections - I have never used the <a href="https://github.com/ServiceStack/ServiceStack.Redis">Service Stack Redis Client</a> but I have to imagine you could get comparable connection pooling semantics from it (even if it required some modification).</li>
+</ul>
+
+
+<h3>RazorPDF</h3>
+
+<p>I saw the <a href="http://nyveldt.com/blog/post/Introducing-RazorPDF">RazorPDF</a> project get announced today via twitter. Looks really cool and I can imagine a lot of scenarios for it. But what caught my eye even more was <a href="http://razorant.com/apps">some of the neat little applications</a> that the developer <a href="http://nyveldt.com/blog/page/about-al-nyveldt">Al Nyveldt</a> has built in his free time.</p>
+
+<p>I got into software development because I want to build cool things, and I have several ideas for games I would like to build for my kids to play. Mostly these are ideas that come to me while helping them with their homework or answering some of the crazy random questions they ask during the day. The problem is I have too many of these ideas and am not able to produce them as fast as I would like, so when someone is able to accomplish that I greatly admire them. So /hattip to you Mr. Nyveldt.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Friday: beer+code]]></title>

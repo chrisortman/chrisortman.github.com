@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Friday: beer+code - Captain's Log</title>
+  <title>powershell snippets - Captain's Log</title>
   <meta name="author" content="Chris Ortman">
 
   
-  <meta name="description" content="On tap: Leinenkugels Summer Shandy
-On the tube: Avengers Today I am setting up an octopress blog. After what happened with posterous I really like &hellip;">
+  <meta name="description" content="Powershell Snippets Oct 15th, 2012 Approve all your .received files in a directory (see also: ApprovalTests) gci -filter *.received.txt | %{move- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/">
+  <link rel="canonical" href="http://chrisortman.github.com/powershell-snippets/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,15 +75,36 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Friday: Beer+code</h1>
-    
-    
+    <h1 class="entry-title">Powershell Snippets</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-15T13:34:00-05:00" pubdate data-updated="true">Oct 15<span>th</span>, 2012</time></p>
+  </header>
+  
+  <p>Approve all your .received files in a directory (see also: <a href="http://approvaltests.sourceforge.net/">ApprovalTests</a>)</p>
+
+<p><code>
+ gci -filter *.received.txt | %{move-item -Path $_ -Destination $_.FullName.Replace(".received.",".approved.") -force }
+</code></p>
+
+  
+    <footer>
       <p class="meta">
         
+        
 
 
 
@@ -96,60 +116,13 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   
 
 
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+<time datetime="2012-10-15T13:34:00-05:00" pubdate data-updated="true">Oct 15<span>th</span>, 2012</time>
         
       </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
-On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
-
-<p>Today I am setting up an <a href="http://octopress.org">octopress</a> blog. After <a href="http://blog.posterous.com/big-news">what happened with posterous</a> I really like the idea of owning my own content/data. I have tried several methods of journaling and blogging before, but struggle to stick with it. I think the git and simple text editor nature of octopress will work for me because it fits into my natural workflow.</p>
-
-<p>I have been very enamored with the ideas of clojure and lisp lately. Mostly the ability to build your own language within them. I also love the purity of how everything is a list. I am working my way through Clojure Programming (currently at location 3483)</p>
-
-<p>Am using <a href="http://code52.org/DownmarkerWPF/">MarkPad</a> to write this, but it keeps complaining about not being able to monitor locked files under .git, I suppose we can fix that&#8230;</p>
-
-<p>I&#8217;m going to dig into the MarkPad source code, and realize I should post a screenshot of the error I&#8217;m getting so I quick <a href="https://www.google.com/search?oq=octopress&amp;sugexp=chrome,mod=7&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=octopress#hl=en&amp;sclient=psy-ab&amp;q=octopress+images&amp;oq=octopress+images&amp;gs_l=serp.3..0l2j0i8j0i22.5591.6913.0.7065.7.5.0.2.2.0.180.769.0j5.5.0.les%3B..0.0...1c.1.WX0tFXap4GM&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=304ddafb65aaa7e0&amp;biw=903&amp;bih=913">check on how to do that with octopress</a>. It looks pretty easy.</p>
-
-<p><img src="screen_shots/markpad_crash2.png"></p>
-
-<p>I know it must be related to monitoring of a file or directory, so I do a git grep &#8220;FileSystemWatcher&#8221; which leads me to <a href="https://github.com/Code52/DownmarkerWPF/blob/master/src/MarkPad/Infrastructure/Abstractions/FileSystemWatcherWrapper.cs">FileSystemWatcherWrapper</a></p>
-
-<p>Simple fix, <a href="">pull request</a> submitted.</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
       
+        <div class="sharing">
   
-
-<span class="byline author vcard">Posted by <span class="fn">Chris Ortman</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/powershell-snippets/index.html" data-via="chriso" data-counturl="http://chrisortman.github.com/powershell-snippets/index.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -159,14 +132,9 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
   
 </div>
 
-    
-    <p class="meta">
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/07/sunday/" title="Next Post: Sunday">Sunday &raquo;</a>
-      
-    </p>
-  </footer>
+    </footer>
+  
 </article>
 
   <section>
@@ -291,8 +259,8 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
-        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
+        var disqus_identifier = 'http://chrisortman.github.com/powershell-snippets/index.html';
+        var disqus_url = 'http://chrisortman.github.com/powershell-snippets/index.html';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Friday: beer+code - Captain's Log</title>
+  <title>Monday - Captain's Log</title>
   <meta name="author" content="Chris Ortman">
 
   
-  <meta name="description" content="On tap: Leinenkugels Summer Shandy
-On the tube: Avengers Today I am setting up an octopress blog. After what happened with posterous I really like &hellip;">
+  <meta name="description" content="Refactoring I am doing a bugfix in some older code that uses direct ADO.NET for queries. This code handles some online directory stuff so there are &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/">
+  <link rel="canonical" href="http://chrisortman.github.com/blog/2012/10/15/monday/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +79,7 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   
   <header>
     
-      <h1 class="entry-title">Friday: Beer+code</h1>
+      <h1 class="entry-title">Monday</h1>
     
     
       <p class="meta">
@@ -96,29 +95,40 @@ On the tube: Avengers Today I am setting up an octopress blog. After what happen
   
 
 
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+<time datetime="2012-10-15T11:35:00-05:00" pubdate data-updated="true">Oct 15<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>On tap: <a href="https://www.facebook.com/pages/Leinenkugels-Summer-Shandy/43479912786">Leinenkugels Summer Shandy</a><br/>
-On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
+<div class="entry-content"><h3>Refactoring</h3>
 
-<p>Today I am setting up an <a href="http://octopress.org">octopress</a> blog. After <a href="http://blog.posterous.com/big-news">what happened with posterous</a> I really like the idea of owning my own content/data. I have tried several methods of journaling and blogging before, but struggle to stick with it. I think the git and simple text editor nature of octopress will work for me because it fits into my natural workflow.</p>
+<p>I am doing a bugfix in some older code that uses direct ADO.NET for queries. This code handles some online directory stuff so there are things like SearchPeople, SearchBusiness, SearchGovernment. You can tell from looking at these functions that the first function was written and then the other two were built by copy / paste and change a couple lines.</p>
 
-<p>I have been very enamored with the ideas of clojure and lisp lately. Mostly the ability to build your own language within them. I also love the purity of how everything is a list. I am working my way through Clojure Programming (currently at location 3483)</p>
+<p>Something that is difficult when you have large functions that have been built this way is that you can tell they are /very/ similar but without careful examination you don&#8217;t know exactly what is different.</p>
 
-<p>Am using <a href="http://code52.org/DownmarkerWPF/">MarkPad</a> to write this, but it keeps complaining about not being able to monitor locked files under .git, I suppose we can fix that&#8230;</p>
+<p>Because to fix this bug I will need to make the same change in 3 different places I know that I should refactor this so that much of the common code is in at the very least a set of helper functions.</p>
 
-<p>I&#8217;m going to dig into the MarkPad source code, and realize I should post a screenshot of the error I&#8217;m getting so I quick <a href="https://www.google.com/search?oq=octopress&amp;sugexp=chrome,mod=7&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=octopress#hl=en&amp;sclient=psy-ab&amp;q=octopress+images&amp;oq=octopress+images&amp;gs_l=serp.3..0l2j0i8j0i22.5591.6913.0.7065.7.5.0.2.2.0.180.769.0j5.5.0.les%3B..0.0...1c.1.WX0tFXap4GM&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=304ddafb65aaa7e0&amp;biw=903&amp;bih=913">check on how to do that with octopress</a>. It looks pretty easy.</p>
+<p>To start this excercise I want to build some <a href="http://approvaltests.sourceforge.net/">ApprovalTests</a> first so that I can get my code coverage high and have a better feel for if/when I break some existing behavior.</p>
 
-<p><img src="screen_shots/markpad_crash2.png"></p>
+<p>Once I had the tests in place I could go about the process of factoring out and combining common code. At one point I had extracted some code from each of my 3 search methods and upon rerunning the tests I found something had broken. It was my own fault for changing too much between running the tests, but what I really wished I could do is undo changes until I could find the exact spot where I had broken the tests, but then I would also need to replay those changes, however, relying on edit/redo to do this would be just as likely to break something else. What I really wanted here was <a href="http://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git-bisect</a></p>
 
-<p>I know it must be related to monitoring of a file or directory, so I do a git grep &#8220;FileSystemWatcher&#8221; which leads me to <a href="https://github.com/Code52/DownmarkerWPF/blob/master/src/MarkPad/Infrastructure/Abstractions/FileSystemWatcherWrapper.cs">FileSystemWatcherWrapper</a></p>
+<h3>Scalability</h3>
 
-<p>Simple fix, <a href="">pull request</a> submitted.</p>
+<p>I saw this <a href="http://highscalability.com/blog/2012/10/15/simpler-cheaper-faster-playtomics-move-from-net-to-node-and.html">blog post</a> about a company moving from ASP.Net to nodejs and Heroku. Now they have <em>massive</em> scale and I can only imagine the type of problems that that could expose, but the issues that they address seem to be addressable in ASP.Net, at least addressable in less work that it would seem to be to move port everything to a new platform.</p>
+
+<ul>
+<li>Background Workers - Wouldn&#8217;t ASP.Net cache expiration handle this?</li>
+<li>Pooled Redis Connections - I have never used the <a href="https://github.com/ServiceStack/ServiceStack.Redis">Service Stack Redis Client</a> but I have to imagine you could get comparable connection pooling semantics from it (even if it required some modification).</li>
+</ul>
+
+
+<h3>RazorPDF</h3>
+
+<p>I saw the <a href="http://nyveldt.com/blog/post/Introducing-RazorPDF">RazorPDF</a> project get announced today via twitter. Looks really cool and I can imagine a lot of scenarios for it. But what caught my eye even more was <a href="http://razorant.com/apps">some of the neat little applications</a> that the developer <a href="http://nyveldt.com/blog/page/about-al-nyveldt">Al Nyveldt</a> has built in his free time.</p>
+
+<p>I got into software development because I want to build cool things, and I have several ideas for games I would like to build for my kids to play. Mostly these are ideas that come to me while helping them with their homework or answering some of the crazy random questions they ask during the day. The problem is I have too many of these ideas and am not able to produce them as fast as I would like, so when someone is able to accomplish that I greatly admire them. So /hattip to you Mr. Nyveldt.</p>
 </div>
 
 
@@ -141,7 +151,7 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
   
 
 
-<time datetime="2012-10-05T22:32:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+<time datetime="2012-10-15T11:35:00-05:00" pubdate data-updated="true">Oct 15<span>th</span>, 2012</time>
       
 
 
@@ -149,7 +159,7 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisortman.github.com/blog/2012/10/15/monday/" data-via="chriso" data-counturl="http://chrisortman.github.com/blog/2012/10/15/monday/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -162,8 +172,10 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/10/12/friday-beer-plus-code/" title="Previous Post: Friday: beer+code">&laquo; Friday: beer+code</a>
       
-        <a class="basic-alignment right" href="/blog/2012/10/07/sunday/" title="Next Post: Sunday">Sunday &raquo;</a>
+      
+        <a class="basic-alignment right" href="/blog/2012/10/17/wednesday/" title="Next Post: Wednesday">Wednesday &raquo;</a>
       
     </p>
   </footer>
@@ -291,8 +303,8 @@ On the tube: <a href="http://www.imdb.com/title/tt0848228/">Avengers</a></p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
-        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/05/friday-beer-plus-code/';
+        var disqus_identifier = 'http://chrisortman.github.com/blog/2012/10/15/monday/';
+        var disqus_url = 'http://chrisortman.github.com/blog/2012/10/15/monday/';
         var disqus_script = 'embed.js';
       
     (function () {
