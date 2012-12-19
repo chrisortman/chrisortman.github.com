@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Friday"
+date: 2012-11-30 08:14
+comments: true
+categories: 
+---
+
+An excellent treatise on IDisposable by [Chris Patterson](http://lostechies.com/chrispatterson/author/chrispatterson/) - [http://lostechies.com/chrispatterson/2012/11/29/idisposable-done-right/](http://lostechies.com/chrispatterson/2012/11/29/idisposable-done-right/)
+
+How to verify calls to Stubs in the Microsoft.Fakes framework [http://www.peterprovost.org//blog/2012/11/29/visual-studio-2012-fakes-part-3](http://www.peterprovost.org//blog/2012/11/29/visual-studio-2012-fakes-part-3)
+
+Awesome new TypeInfo API [http://visualstudiomagazine.com/articles/2012/11/29/typeinfo-reflection.aspx](http://visualstudiomagazine.com/articles/2012/11/29/typeinfo-reflection.aspx)
+
+I love the Rooms feature of my WP8, but my wife has a WP7. Here are some ways we can bridge the gap [http://blogs.windows.com/windows_phone/b/windowsphone/archive/2012/11/29/tips-for-using-rooms-on-other-phones.aspx](http://blogs.windows.com/windows_phone/b/windowsphone/archive/2012/11/29/tips-for-using-rooms-on-other-phones.aspx)
