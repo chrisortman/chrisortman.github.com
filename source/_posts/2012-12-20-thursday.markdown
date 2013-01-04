@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Thursday"
+date: 2012-12-20 12:36
+comments: true
+categories: 
+---
+
+I just read [this story](http://www.huffingtonpost.com/2012/12/16/i-am-adam-lanzas-mother-mental-illness-conversation_n_2311009.html) about the mother of a mentally ill child, and I must say, this scares me silly. Given the amount of medications that one of my children has been on since birth I have a real fear that something like this could wind up happening to him and it just breaks my heart. 
+
+Thinking about his is almost enough to make me say maybe we shouldn't try to reform gun control. Maybe if there are these dangerous assault weapons out there then people will be scared enough to do something towards correctly the real problem. 
+
+----
+
+@codinghorror shared a link to a summarized version of a book I've been reading. [How to talk so kids will listen](http://www.parentbooksummaries.com/wp-content/uploads/2010/08/02-How-to-Talk-so-Kids-Will-Listen.pdf). I highly recommend this book. I am also curious to explore the rest of the site to see what else might be on there.
+
+{%blockquote Adele Faber and Elaine Mazlish, How to Talk SO Kids WIll Listen & Listen SO Kids Will Talk%}
+It’s a bittersweet road we parents travel. We 
+start with total commitment to a small, 
+helpless human being. Over the years we 
+worry, plan, comfort, and try to understand. 
+We give our love, our labor, our knowledge 
+and our experience—so that one day he or 
+she will have the inner strength and 
+conﬁdence to leave us.
+{% endblockquote %}
+
+{%blockquote Adele Faber and Elaine Mazlish, How to Talk SO Kids WIll Listen & Listen SO Kids Will Talk%}
+Let us realize that along with food, shelter, 
+and clothing, we have another obligation to 
+our children, and that is to afﬁrm their 
+“rightness.” The whole world will tell them 
+what’s wrong with them—loud and often. 
+Our job is to let our children know what’s 
+right about them.
+{% endblockquote %}
+
+----
+
+I found a really nice jQuery file upload [widget](https://github.com/blueimp/jQuery-File-Upload)
+
+This site looks pretty interesting [Neurologica](http://theness.com/neurologicablog/index.php)
