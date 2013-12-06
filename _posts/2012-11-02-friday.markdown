@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Friday"
+date: 2012-11-02 11:21
+comments: true
+categories: 
+---
+
+Upgraded to windows 8 at work today. Here are some helpful links:
+
+* http://superuser.com/questions/259309/can-you-change-the-icon-of-a-pinned-ie-9-web-application-and-how-do-you-do-it (because I pin [Slimtimer](http://slimtimer.com) to my task bar)
+* http://www.askvg.com/fix-internet-explorer-tile-missing-from-windows-8-start-screen-or-metro-ie-doesnt-start/ (because sometimes I just like to use full screen IE)
+* http://www.winsupersite.com/article/windows8/windows-8-tip-customize-start-screen-144230 (customize the start screen)
+* http://blog.coretech.dk/jgs/windows-8-how-to-open-powershell-ise-and-how-to-use-new-command-browser-feature/ (find powershell_ise)
+* http://webpages.charter.net/krumsick/ (remap CapsLock to Esc, Autohotkey seems to not work consistently for me in Win8)
+
+Of course [Chocolatey](http://chocolatey.org) and [Ninite](http://ninite.com) are essential.
+
+Because we install Office 2013 I noticed Skydrive Pro, but wasn't sure what it was:
+
+* http://sharepoint.microsoft.com/blog/Pages/BlogPost.aspx?pID=1033
+
+I am across [this article](http://elm-lang.org/learn/Escape-from-Callback-Hell.elm) about a programming language called [Elm](http://elm-lang.org). While I was reading it I kept thinking to myself that this is all stuff that we can do pretty well in C# 5.0 using either async/await or Rx. A lot of people have asked me about what Microsoft is doing, why this HTML & Javascript push in Win8. I usually explain that it really comes down to market penetration. Visual Studio and C# has got a good market position, but is is not growing rapidly anymore, so in order for Microsoft to grow their business they need to make in roads with *more* developers and this means trying to appeal to the Javascript & PHP crowds. Think it is a coincidence that they have invested heavily in nodejs support on Azure? The thing is I think these crowds will generally reject Microsoft on principle alone so the only thing they gain is to alienate their base. The saddest part is I think it will hurt the industry as a whole because instead of innovating with C# they will focus their time & energy on making javascript more like C#.
+

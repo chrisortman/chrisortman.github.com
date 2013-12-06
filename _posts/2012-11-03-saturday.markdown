@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Saturday"
+date: 2012-11-03 22:10
+comments: true
+categories: 
+---
+
+I wanted to copy all the photos I have stored on the 'family' compute over to my laptop, mostly because I do not have a terrific backup stratedy in place. I was going to just use rsync to do it, but I thought I would do a quick google and see if there were any better options. I cam across this little utility from Microsoft
+
+http://www.microsoft.com/en-us/download/details.aspx?id=15155
+

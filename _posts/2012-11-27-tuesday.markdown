@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Tuesday"
+date: 2012-11-27 08:35
+comments: true
+categories: 
+---
+
+I enjoyed [this piece](http://mikehadlow.blogspot.com/2012/11/rabbitmq-on-windows-with-net-case-study.html) by Mike Hadlow about his experiences using RabbitMQ. Once upon a time about 3 years ago I did some very extensive study on choosing a message queuing platform and wound up selecting RabbitMQ. It's good to know I would still probably agree with this decision now.
+
+[This article](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx) has a lot of good information about the TPL and UI marshalling
+
+[Planning for retrospectives](http://www.plans-for-retrospectives.com/?id=22-35-8-49-16) looks interesting.
+
+####Would I recommend TFS?
+
+It is tollerable for the most part...the way we use it i don't bump into it a lot, and yes git-tf helps with that. But things like I have this fix that i need to put in these N versions is still awful (not that you can't get yourself into trouble with git doing that too, git at least optimized the easy case whereas TFS makes easy hard and hard impossible) that is the version control story.
+
+I think it depends on who is buying TFS and why.
+
+The issue tracking for instance means that support people have to have copies of visual studio. And free text searching for bugs is pretty much non existent, so you get a lot of duplicates and "I already answered that see this bug" type of occurrences.
+
+There is also a lot of ceremony to fill out that while it seems good in theory to always require Developer Release Notes and Client Release Notes often times they are either obvious or people are lazy/in a hurry so you get DONE and FIXED and then someone has to clean that stuff up anyway to assemble a professional set of release notes.
+
+The charts and the burndown tracking demo really well, but in order for them to work people have to very diligently estimate all tasks and keep them up to date with how many hours completed / remaining or they are useless...and that is a lot of book keeping where no real work is getting done...for hundreds of developers that might make sense, for a number where you can do a weekly standup in ~30 minutes....way overkill
+
+Also, want to customize your build? Say hello to Windows Workflow and say goodbye to your soul *this is probably the biggest gripe i have with it ATM*

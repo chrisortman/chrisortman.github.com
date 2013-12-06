@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Monday"
+date: 2012-11-26 14:13
+comments: true
+categories: 
+---
+
+Sad that Microsoft took away _bin_deployableAssemblies http://stackoverflow.com/questions/9587355/is-visual-studio-11-beta-missing-the-add-deployable-assemblies-menu-option?rq=1
+

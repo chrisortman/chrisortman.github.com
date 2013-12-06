@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Tuesday"
+date: 2012-10-09 15:12
+comments: true
+categories: 
+---
+
+##References
+
+[Measuring MSBuild performance](http://intwoplacesatonce.com/2009/08/measuring-msbuild-performance/)
+
+[How to configure MSBuild file logging](http://msdn.microsoft.com/en-us/library/ms171470(v=vs.110).aspx)
+
+[How to make TeamBuild generate web deploy zip file](http://vishaljoshi.blogspot.com/2010/11/team-build-web-deployment-web-deploy-vs.html)
+

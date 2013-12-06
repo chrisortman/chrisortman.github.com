@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Tuesday"
+date: 2012-11-21 10:06
+comments: true
+categories: 
+---
+
+I am really starting to get into [ServiceStack](http://servicestack.net)
+
+This was a really useful post for helping get my integration tests setup and running http://blogs.lessthandot.com/index.php/DesktopDev/MSTech/using-servicestack-for-the-easyhttp

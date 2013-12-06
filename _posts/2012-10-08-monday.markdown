@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Monday"
+date: 2012-10-08 10:19
+comments: true
+categories: Musings
+---
+
+This [post about OSS projects](https://plus.google.com/111465598045192916635/posts/CkmmbjmvebM) came across
+my twitter feed this morning. My first reaction was to make some snarky remarks about the javascript
+community, but then I began to wonder to what degree to the values of a language attract people of similar values?
+
+If the values of a language are to strive for the highest order of elegance and simplicity then people who 
+gravitate to those things will start using that language. I don't want to stereotype people based on a programming 
+language choice as there are many other reasons someone might use a language, but either what I have observed or
+my confirmation bias makes me think this is at least partly true.
+
+----
+
