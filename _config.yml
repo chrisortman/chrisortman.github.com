@@ -1,10 +1,29 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+author: Chris Ortman
+title: Chris Ortman
+email: chrisortman@gmail.com
+description: "Personal web site for chris ortman"
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://chrisortman.com"
+gravatar_url: http://www.gravatar.com/avatar/d57d8b027fe943f061b6187d870443a7
+timezone:    America/Chicago
+
+# Github repositories
+github_username: chrisortman
+github_repo_url: https://github.com/chrisortman/chrisortman.github.com/
+
+# Twitter
+twitter_username: chriso
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: chrisoblog
+disqus_show_comment_count: true
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+    extensions: ["tables"]
 permalink: pretty
+
+
