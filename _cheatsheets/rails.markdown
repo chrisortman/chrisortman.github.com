@@ -1,8 +1,14 @@
+---
+layout: page
+title: Rails
+---
 # Rails Cheatsheet
 
 Start With: 
  	
-	rails new <your_app> -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+```ruby
+rails new <your_app> -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+```
 
 ## Stack
 * rspec
@@ -17,6 +23,7 @@ Start With:
 
 #### Form Helper
 
+```ruby
     module FormHelper
     
       def bootstrap_form_for(name, *args, &block)
@@ -43,6 +50,7 @@ Start With:
         end
       end
     end
+```
 
 
 

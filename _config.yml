@@ -26,4 +26,7 @@ redcarpet:
     extensions: ["tables"]
 permalink: pretty
 
+collections:
+  cheatsheets:
+    output: true
 
