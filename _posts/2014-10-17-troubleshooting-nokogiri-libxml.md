@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 date: "2014-10-17 10:43"
 comments: true
@@ -61,6 +61,4 @@ The key to this puzzle is in these libpaths. You can see on my machine it is sea
 
 So something in the macports version of libxml2 is broken which ripples all the way up to our capybara tests. 
 
-I'm not sure if the macports library can just be upgraded and everything will be fine. Along the way we figured out that if we enclosed the xpath with parens it would do the right thing so we opted to do that in order to avoid having to patch build servers with a new library. 
-    	
-    
+I'm not sure if the macports library can just be upgraded and everything will be fine. Along the way we figured out that if we enclosed the xpath with parens it would do the right thing so we opted to do that in order to avoid having to patch build servers with a new library.
