@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 #Release builds with TFS + GIT
