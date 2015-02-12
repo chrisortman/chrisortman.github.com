@@ -1,5 +1,5 @@
 require "stringex"
-class Jekyll < Thor
+class Post < Thor
   desc "new", "create a new post"
   method_option :editor, :default => "vim"
   def new(*title)
