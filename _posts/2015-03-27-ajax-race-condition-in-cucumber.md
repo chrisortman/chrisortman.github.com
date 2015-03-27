@@ -1,8 +1,13 @@
 ---
+published: true
 layout: post
 title: "AJAX race condition in cucumber"
-tags: rails mssql cucumber
- -
+date: "2015-03-27 9:19"
+comments: true
+tags:
+ - rails
+ - mssql
+ - cucumber
 ---
 
 * cucumber

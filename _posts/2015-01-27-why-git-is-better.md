@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Why git is better"
-tags: git
 published: false
- -
+tags: 
+ - git
 ---
 
 Git is different /better/ than other version control systems because other systems give you commands for manipulating
