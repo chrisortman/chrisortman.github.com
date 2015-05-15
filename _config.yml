@@ -20,6 +20,11 @@ twitter_tweet_button: true
 disqus_short_name: chrisoblog
 disqus_show_comment_count: true
 
+analytics:
+  provider: google
+  google:
+    tracking_id: UA-28427413-2
+
 # Build settings
 markdown: redcarpet
 redcarpet:
