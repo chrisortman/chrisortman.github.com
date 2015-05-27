@@ -1,14 +1,22 @@
+---
 - title: anki
   url: http://ankisrs.net
-  added: 2015-05-14T23:17:15-0500
-  description: Neat application that will let you program a series of flash cards, I think based on some scientific methods of memory.
-  tags: 
-    - oss
-    - kids
+  added: 2015-05-14 23:17:15.000000000 -05:00
+  description: Neat application that will let you program a series of flash cards,
+    I think based on some scientific methods of memory.
+  tags:
+  - oss
+  - kids
 - title: shipyard
   url: http://shipyard-project.com/
-  added: 2015-05-14T23:17:47-0500
+  added: 2015-05-14 23:17:47.000000000 -05:00
   description: Web app for managing docker containers & images. Written in go
   tags:
-    - oss
-    - go
+  - oss
+  - go
+- title: dat.gui
+  url: http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage
+  added: 2015-05-26 21:53:54.752970000 -05:00
+  description: Neat javascript library for creating a settings popup
+  tags:
+  - javascript
