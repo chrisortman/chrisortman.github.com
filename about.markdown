@@ -8,6 +8,6 @@ categories:
 
 #About me  (and this site)
 
-I work as a software developer at [Innovative Systems](http://innovsys.com). I am a father of 6 children and live in a tiny town called [Ethan](http://binged.it/PZjoqJ)
+I work as a software developer at the [University of Iowa](http://www.uiowa.edu). I am a father of 6 children and live in Iowa
 
 I love to [read](https://kindle.amazon.com/profile/Chris-Ortman/1023964)
