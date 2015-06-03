@@ -7,6 +7,8 @@ tags:
  - docker
 ---
 
+_links at bottom_
+
 # Docker is awesome.
 
 
@@ -458,6 +460,9 @@ open -a firefox http://$(boot2docker ip):8001
 
 #### More Info
 
-* join #docker channel on slack [http://j.mp/tc-slack]()
-
+* join #docker channel on [slack](http://j.mp/tc-slack)
+* [Slides](http://www.slideshare.net/chrisortman/docker-cr-ineta20150601)
+* [Demo scripts](https://github.com/chrisortman/docker-demos)
+* [cucumber runner dockerfile](https://github.com/chrisortman/cucumber-hydra)
+* [cucumber runner image](https://registry.hub.docker.com/u/chrisortman/cucumber-runner/)
 
