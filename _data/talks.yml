@@ -1,0 +1,8 @@
+---
+- title: Why you should learn docker
+  given: 2015-05-21 
+  links:
+    - text: Notes
+      url: http://foo
+    - text: Slides
+      url: http://bar

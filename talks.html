@@ -8,6 +8,11 @@ title: talks
   <h1>talks</h1>
 
   <ul class="posts">
+      {% for talk in site.data.talks %}
+        <li>
+          {{ talk.title }}
+        </li>
+      {% endfor %}
       <li>
         <h5>2015-06-01 - Docker is Awesome - CRIneta</h5>
         <ul class="talk-links">

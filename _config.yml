@@ -32,6 +32,8 @@ redcarpet:
 permalink: pretty
 
 collections:
+  talks:
+    output: true
   cheatsheets:
     output: true
 
