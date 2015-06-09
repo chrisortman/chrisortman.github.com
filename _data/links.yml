@@ -23,6 +23,13 @@
 - title: VIM productivity boost
   url: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
   added: 2015-06-01 15:20:01.946931000 -05:00
-  description: 'Has a lot of nice vim setup tips. Some good text-object mappings and suggestion to use space as leader'
+  description: Has a lot of nice vim setup tips. Some good text-object mappings and
+    suggestion to use space as leader
   tags:
   - vim
+- title: VIM text objects
+  url: http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/
+  added: 2015-06-09 10:15:12.112904000 -05:00
+  description: Excellent description of VIM text objects and how they work.
+  tags:
+    - vim
