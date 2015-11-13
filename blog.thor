@@ -49,7 +49,7 @@ class New < Thor
     system(options[:editor], filename)
   end
 
-  desc "link", "add a link (title,url)"
+  desc "link TITLE URL", "add a link (TITLE,URL)"
   method_option :editor, :default => "vim"
   def link(title, url)
     date = Time.now
