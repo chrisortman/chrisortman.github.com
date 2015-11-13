@@ -88,4 +88,19 @@ tutorial and *YES* I can just bootstrap and provision my own local VM
 
 
 
+2015-11-07T13:49:13-0600
+
+Trying to get test kitchen to work.
+
+Using [tutorial](https://learn.chef.io/local-development/ubuntu/get-started-with-test-kitchen/)
+
+I had problems because my provisioner was policy_zero instead of chef_zero
+
+It made it have an error like
+
+```
+Kitchen: Class: Kitchen::ActionFailed
+E, [2015-10-20T09:52:17.731916 #6362] ERROR -- Kitchen: Message: Failed to complete #converge action: [No lockfile at /home/sebastian/git/sebbaum/chef-temp/motd/Policyfile.lock.json - you need to run `install` before `push`]
+```
+
 
