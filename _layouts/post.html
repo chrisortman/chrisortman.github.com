@@ -14,9 +14,8 @@ layout: default
 
 </div>
 
-{% if site.disqus_short_name and page.comments == true %}
-<section id="comment">
-    <h1 class="title">Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include disqus_thread.html %}</div>
-</section>
+{% if page.comments == true %}
+<hr/>
+<h1 class="title">Comments</h1>
+<div class="fb-comments" data-href="{{ site.url + page.url }}" data-num-posts="4" data-width="706"></div>
 {% endif %}
