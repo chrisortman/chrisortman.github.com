@@ -46,3 +46,11 @@
   url: http://www.the-open-mind.com/the-life-of-an-introvert-described-by-17-different-graphs/
   added: 2015-11-16 21:25:34.380782000 -06:00
   description: Nice series of charts about being an introvert
+- title: Quick rsync how-to
+  url: https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
+  added: 2016-01-02 12:13:40.085371000 -06:00
+  description: Useful intro to help get something done with rsync
+- title: Intro to VIM registers
+  url: http://usevim.com/2012/04/13/registers/
+  added: 2016-01-02 12:14:59.045342000 -06:00
+  description: 'Explains the basics of VIM registers'
