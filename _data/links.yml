@@ -53,4 +53,8 @@
 - title: Intro to VIM registers
   url: http://usevim.com/2012/04/13/registers/
   added: 2016-01-02 12:14:59.045342000 -06:00
-  description: 'Explains the basics of VIM registers'
+  description: Explains the basics of VIM registers
+- title: sigmajs
+  url: http://sigmajs.org/
+  added: 2016-02-01 08:16:00.278804000 -06:00
+  description: 'Nice little javascript library for building a visualization of a network of nodes'
