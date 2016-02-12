@@ -57,4 +57,9 @@
 - title: sigmajs
   url: http://sigmajs.org/
   added: 2016-02-01 08:16:00.278804000 -06:00
-  description: 'Nice little javascript library for building a visualization of a network of nodes'
+  description: Nice little javascript library for building a visualization of a network
+    of nodes
+- title: Sketch Shortcuts
+  url: http://sketchshortcuts.com
+  added: 2016-02-11 18:40:15.046399000 -06:00
+  description: 'Lots of keyboard shortcuts for using sketchapp'
